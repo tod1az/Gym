@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation"
 import Button from "./Button"
 import Image from "next/image"
 import { useSession, signOut } from "next-auth/react"
+import Avatar from "./Avatar"
 
 export default function NavBar() {
   
@@ -37,14 +38,15 @@ export default function NavBar() {
       }
       {
         path !== '/signin'&&!session && (
-            <Button type={"button"} text="Sign in" clickHandler={()=>{router.push('/signin')}} />
+            <Button type={"button"} text="Sign up" clickHandler={()=>{router.push('/signup')}} />
         )
       }
       {
         session && (
-            <Button type={"button"} text="Log Out" clickHandler={logOut} />
+            <Button type={"button"} text="Sign out" clickHandler={logOut} />
         )
       }
+      <Avatar/>
     </main>
   )
 }
