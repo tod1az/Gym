@@ -12,9 +12,10 @@ export type ButtonProps = {
 }
 
 export type  ExerciseType = {
-  name: string,
-  sets: number,
-  repetitions:number
+  name: string
+  sets: number
+  repetitions: number
+  weight:number
 }
 
 export type ExerciseProps = {
@@ -23,9 +24,17 @@ export type ExerciseProps = {
 
 export type ExerciseList = ExerciseType[]
 
+export type EditExerciseProprs = {
+  exercise: ExerciseType
+  save:(ExerciseType)=>void
+}
+
+export type Day = (typeof Days)[keyof typeof Days]
+
 export type DayProps = {
   exercises: ExerciseList
-  day: (typeof Days)[keyof typeof Days]
+  day: Day
 }
+
 
 export type ClickEvent = React.MouseEvent<HTMLButtonElement>
