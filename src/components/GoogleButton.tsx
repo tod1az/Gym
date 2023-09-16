@@ -12,7 +12,7 @@ const GoogleButton: React.FC = () => {
       onClick={handleClick}
       type="button"
       className="mt-2 flex gap-2 cursor-pointer items-center border hover:scale-110 active:translate-y-1 bg-black  border-white px-4 py-1 rounded-lg  place-self-center transition">
-      <FcGoogle/><p>Sign in with Google</p>
+      <FcGoogle/><p>Sign up with Google</p>
     </button>
   )
 }
