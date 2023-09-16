@@ -6,31 +6,35 @@ const mockExercisesList: ExerciseList = [
   {
     name: "some exercise",
     sets: 3,
-    repetitions:15
+    repetitions:15,
+    weight:100
   },
   {
     name: "some exercise",
     sets: 3,
-    repetitions:15
+    repetitions:15,
+    weight:100
   },
   {
     name: "some exercise",
     sets: 3,
-    repetitions:15
+    repetitions:15,
+    weight:100
 }
 ]
 
 const Day:React.FC<DayProps> = ({ exercises, day }) => {
   return (
-    <main className="flex flex-col items-center" >
-      <h1 className="font-extrabold text-5xl capitalize mt-4 p-10">{ day }</h1>
-      {
-        mockExercisesList.map((exercise, index) => (
-          <Fragment key={index}>
-            <Exercise exercise={exercise}/>
-          </Fragment>
-        ))
-      }
+    <main className=" mt-20 flex flex-col items-center" >
+      <div className="flex gap-3">
+        {
+          mockExercisesList.map((exercise, index) => (
+            <Fragment key={index}>
+              <Exercise exercise={exercise}/>
+            </Fragment>
+          ))
+        }
+      </div>
     </main>
   )
 }

@@ -3,6 +3,7 @@ import Day from "@/components/Day"
 import { useSession } from "next-auth/react"
 import Image from "next/image"
 import { Days } from "@/lib/consts"
+import DayNav from "@/components/DayNav"
 
 
 const Profile = () => {
@@ -11,7 +12,6 @@ const Profile = () => {
   
   return (
     <main className=" pt-10 flex flex-col justify-items-center items-center">
-      <h1 className="text-3xl p-4">Profile </h1>
       {
         session&&(
             <>
@@ -28,6 +28,7 @@ const Profile = () => {
             </>
           )
       }
+      <DayNav/>
       <Day exercises={[]} day={Days.MONDAY} />
     </main>
   )
