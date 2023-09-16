@@ -1,6 +1,9 @@
 'use client'
+import Day from "@/components/Day"
 import { useSession } from "next-auth/react"
 import Image from "next/image"
+import { Days } from "@/lib/consts"
+
 
 const Profile = () => {
 
@@ -25,6 +28,7 @@ const Profile = () => {
             </>
           )
       }
+      <Day exercises={[]} day={Days.MONDAY} />
     </main>
   )
 }
