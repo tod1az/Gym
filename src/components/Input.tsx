@@ -2,7 +2,11 @@
 import { type InputProps } from "@/lib/types"
 
 
-const  Input:React.FC<InputProps> =  ({ type, placeholder }) =>  {
+const Input: React.FC<InputProps> = ({ type, placeholder }) => {
+  
+  if (typeof placeholder === 'number') {
+    placeholder = String(placeholder)
+  }
   return (
     <input
         type={type}
