@@ -2,7 +2,7 @@ import { type DayProps, type ExerciseList } from "@/lib/types"
 import { Fragment } from "react"
 import Exercise from "./Exercise"
 
-const mockExercisesList: ExerciseList = [
+export const mockExercisesList: ExerciseList = [
   {
     name: "some exercise",
     sets: 3,

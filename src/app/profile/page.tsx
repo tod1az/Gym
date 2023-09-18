@@ -4,6 +4,8 @@ import { useSession } from "next-auth/react"
 import Image from "next/image"
 import { Days } from "@/lib/consts"
 import DayNav from "@/components/DayNav"
+import Link from "next/link"
+import { AiOutlinePlusCircle } from "react-icons/ai"
 
 
 const Profile = () => {
@@ -28,8 +30,15 @@ const Profile = () => {
             </>
           )
       }
-      <DayNav/>
+      <DayNav />
+      {/* Recordar tomar el dia de forma dinamica */}
       <Day exercises={[]} day={Days.MONDAY} />
+      <Link
+        href={`/new?day=${Days.MONDAY}`}
+        className="mt-14 text-4xl hover:scale-110 active:translate-y-1"
+      >
+         <AiOutlinePlusCircle/>
+      </Link>
     </main>
   )
 }

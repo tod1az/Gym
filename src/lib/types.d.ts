@@ -2,7 +2,9 @@ import { Days } from "./consts"
 
 export type InputProps = {
   type: string,
-  placeholder:string | number
+  placeholder: string | number
+  change?: (e:React.ChangeEvent<HTMLInputElement>) => void 
+  value?:string| number
 }
 
 export type ButtonProps = {
