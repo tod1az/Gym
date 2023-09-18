@@ -12,7 +12,7 @@ const DayNav = () => {
           {
             Object.entries(Days).map(([key, value]) => (
               <li
-                className={clsx("text-white/20 cursor-pointer capitalize",{"text-white/100":selected === value})}
+                className={clsx(" text-gray-950/50 cursor-pointer capitalize",{"!text-white":selected === value})}
                 key={key}
                 onClick={() => {
                   setSelected(value)
@@ -21,7 +21,7 @@ const DayNav = () => {
                 {value}
               </li>
             ))
-          }
+        }
         </ul>
     </nav>
   )
